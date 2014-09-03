@@ -1,0 +1,15 @@
+!!! 5
+%html
+  %head
+    %link{ rel: "stylesheet", href: "https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css" }
+    %link{ rel: "stylesheet", href: "assets/all.css" }
+
+.container
+  .row.trombi
+    - characters.each do |c|
+      .col-sm-2.trombi-entry
+        .thumbnail
+          %img{ src: c.photo }
+          .caption
+            .text-center
+              #{c.code_trombi} - #{c.id} - #{c.name} - #{c.player_name}
