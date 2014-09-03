@@ -14,6 +14,5 @@ print "Photos manquantes : "
 puts  characters.select { |c| not c.photo }.map { |c| c.id }.sort.join(' ')
 
 t = TrombiGenerator.new(characters.sort_by { |c| c.code_trombi })
-t.generate!
-
-puts "Trombi généré dans output/index.html"
+t.generate!('orgas')
+t.generate!('joueurs', false)

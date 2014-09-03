@@ -5,11 +5,14 @@
     %link{ rel: "stylesheet", href: "assets/all.css" }
 
 .container_fluid
-  .row.trombi
+  .row.trombi{ class: details ? 'details' : 'no-details'}
     - characters.each do |c|
       .col-sm-2.trombi-entry
         .thumbnail
           %img{ src: c.photo }
           .caption
             .text-center
-              #{c.code_trombi} - #{c.id} - #{c.name} - #{c.player_name}
+              - if details
+                #{c.code_trombi} - #{c.id} - #{c.name} - #{c.player_name}
+              - else
+                #{c.code_trombi}

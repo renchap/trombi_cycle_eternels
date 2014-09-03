@@ -1,17 +1,29 @@
 body {
   padding-top: 0px !important;
+  padding-left: 20px;
   font-size: 12px;
 }
 
 @media print {
-  .trombi > &:nth-child(18n+6) {
+  .trombi-entry:nth-child(12n+0) {
     page-break-after: always;
   }
 }
 
-.trombi-entry > .thumbnail {
+.details > .trombi-entry > .thumbnail {
   border: 0px;
-  height: 250px;
+  height: 310px;
+}
+
+.no-details > .trombi-entry > .thumbnail {
+  border: 0px;
+  height: 200px;
+}
+
+.no-details > .trombi-entry .caption {
+  position: absolute;
+  top: 0px;
+  left: -10px;
 }
 
 .trombi-entry > .thumbnail > img {

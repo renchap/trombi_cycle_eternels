@@ -36,6 +36,6 @@ class Character
 
   def photo_regexp
     f, s = @id.split('-')
-    /#{f} ?[-_ ]? ?0*#{s.to_i}/
+    /#{f} ?[-_ ]? ?0*#{s.to_i}[^0-9]/
   end
 end
