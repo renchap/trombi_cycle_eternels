@@ -3,15 +3,15 @@ body {
   font-size: 12px;
 }
 
-.trombi {
-  &:nth-child(18n+6) {
+@media print {
+  .trombi > &:nth-child(18n+6) {
     page-break-after: always;
   }
 }
 
 .trombi-entry > .thumbnail {
   border: 0px;
-  height: 300px;
+  height: 250px;
 }
 
 .trombi-entry > .thumbnail > img {
